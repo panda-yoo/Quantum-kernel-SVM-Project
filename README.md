@@ -1,6 +1,12 @@
 # Quantum Kernel SVM Project
 
-This project explores quantum kernel based Support Vector Machines (SVMs) and compares multiple feature-map circuits on synthetic and real datasets.
+This project investigates quantum kernel-based Support Vector Machines (QSVMs) by comparing multiple quantum feature-map circuits across synthetic and real-world datasets.
+
+Implemented using Qiskit and scikit-learn, the study evaluates how feature-map design and encoding parameter α influence classification accuracy, decision boundaries, and kernel performance.
+
+Datasets include XOR synthetic data and the Wisconsin Breast Cancer dataset.
+
+Developed as part of PH874 – Basics of Quantum Computing.
 
 The repository contains two main notebooks:
 
