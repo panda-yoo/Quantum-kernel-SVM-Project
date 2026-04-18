@@ -1,22 +1,14 @@
 
-import pandas as pd
 import numpy as np
 from numpy.typing import NDArray
 
-import matplotlib.pyplot as plt
 from matplotlib.axes import Axes
 import os
 
-from tqdm import tqdm
-
-from typing import Callable, Tuple, List
+from typing import List
 
 from sklearn.svm import SVC
 
-
-from qiskit.primitives import StatevectorSampler
-from qiskit.visualization import plot_histogram
-from qiskit.circuit.library import unitary_overlap
 from qiskit import QuantumCircuit
 from qiskit.circuit import Parameter
 from qiskit.quantum_info import Statevector
@@ -91,10 +83,9 @@ def plot_decision_boundary_quantum(
     ax.contour(xx, yy, Z, levels=[0], colors='black', linewidths=2)
     ax.scatter(norm_X_train[:, 0], norm_X_train[:, 1], c=y_train, edgecolors='k')
 
-    ax.set_title(f"Fast Decision Boundary \n(λ = {title})")
+    ax.set_title(f"Decision Boundary \n(λ = {title})")
     ax.set_xlabel("x0")
     ax.set_ylabel("x1")
-   
 
 #  --------------------------| plot_decision_boundary_classical |--------------------------
 def plot_decision_boundary_classical(model:SVC, X_train:NDArray, y_train:NDArray, ax:Axes, title:str, h:float=0.02):
@@ -125,8 +116,7 @@ def plot_decision_boundary_classical(model:SVC, X_train:NDArray, y_train:NDArray
     ax.set_ylabel("x1")
 
 
-def folder():
-    folder_name = 'result'
+def folder(folder_name:str):
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
     return folder_name
