@@ -59,6 +59,21 @@ Key outputs:
 - result/paper_result/for_XOR.csv
 - result/paper_result/<dataset>_Accuracy_vs_Feature.jpg
 
+Functions for Entanglement:\
+    $f_1 = \frac{\pi}{(1+\cos x)(1+\cos y)}$\
+    $f_2 = \pi xy$\
+    $f_3 = \frac{\pi}{2}(1-x)(1-y)$\
+    $f_4 = \pi e^{\frac{(x-y)^2}{8/\ln(\pi)}}$\
+    $f_5 = \frac{\pi}{3\cos x \cos y}$\
+    $f_6 = \pi \cos x \cos y$
+- for circle with Functions\
+ ![](result/paper_result/circle_Accuracy_vs_Feature.jpg)
+- for moon with Functions\
+ ![](result/paper_result/moon_Accuracy_vs_Feature.jpg)
+- for XOR with Functions
+ ![](result/paper_result/XOR_Accuracy_vs_Feature.jpg)
+
+
 ## Project Structure
 
 - src/utils.py: quantum kernel training helpers.
